@@ -5,3 +5,11 @@ PyQt5==5.12
 PyQt5-sip==4.19.17
 requests==2.22.0
 urllib3==1.25.2
+et-xmlfile==1.0.1
+jdcal==1.4.1
+openpyxl==2.6.2
+numpy==1.16.3
+pandas==0.24.2
+python-dateutil==2.8.0
+pytz==2019.1
+six==1.12.0

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui\main.ui'
+# Form implementation generated from reading ui file 'ui/main.ui'
 #
 # Created by: PyQt5 UI code generator 5.12
 #
@@ -726,9 +726,16 @@ class Ui_MainWindow(object):
         self.input_end_index.setEnabled(False)
         self.input_end_index.setGeometry(QtCore.QRect(510, 250, 120, 30))
         self.input_end_index.setObjectName("input_end_index")
+        self.radio_code_all = QtWidgets.QRadioButton(self.centralwidget)
+        self.radio_code_all.setGeometry(QtCore.QRect(330, 170, 180, 30))
+        self.radio_code_all.setObjectName("radio_code_all")
+        self.radio_code_6 = QtWidgets.QRadioButton(self.centralwidget)
+        self.radio_code_6.setGeometry(QtCore.QRect(510, 170, 180, 30))
+        self.radio_code_6.setChecked(True)
+        self.radio_code_6.setObjectName("radio_code_6")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -1348,11 +1355,13 @@ class Ui_MainWindow(object):
         self.text_message.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'.SF NS Text\';\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'.SF NS Text\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.label_name_token.setText(_translate("MainWindow", "Token          :"))
         self.label_name_end_index.setText(_translate("MainWindow", "End Index     :"))
         self.input_end_index.setText(_translate("MainWindow", "0"))
+        self.radio_code_all.setText(_translate("MainWindow", "Code All"))
+        self.radio_code_6.setText(_translate("MainWindow", "Code 6"))
 
 
 

@@ -1,6 +1,8 @@
 import requests
 import json
 import pickle
+import pandas
+import datetime
 from PyQt5 import QtCore
 
 
@@ -308,10 +310,39 @@ COUNTRY = {
     'Zimbabwe': '716'
 }
 
+COL = [
+    'cmdCode',
+    'rgDesc',
+    'cmdDescE',
+    'yr',
+    'rtTitle',
+    'ptTitle',
+    'TradeValue',
+    'NetWeight',
+    'qtDesc',
+    'TradeQuantity',
+]
+
 
 def repaintText(object, message):
     object.append(message)
     QtCore.QCoreApplication.processEvents()
+
+
+def dataToExcel(data):
+    excel_dict = dict()
+    index = 1
+    for key, value in data.items():
+        for sub_key, sub_value in value.items():
+            excel_dict[index] = sub_value
+            index += 1
+    if len(excel_dict) > 0:
+        filename = int(datetime.datetime.now().timestamp())
+        df = pandas.DataFrame.from_dict(excel_dict, orient='index', columns=COL)
+        df.to_excel('{}.xlsx'.format(filename), index=False)
+        return 'Data save as {}.xlsx .'.format(filename)
+
+    return 'No data.'
 
 
 def getUNCodeList():
@@ -352,10 +383,10 @@ def getUNComtradeLen():
     return (code_all, code_6, message)
 
 
-def getData(params, index, text_message):
+def getData(radio, params, index, end_index, text_message):
     url = 'https://comtrade.un.org/api/get'
     data = dict()
-    f = open('code_all.pkl', 'rb')
+    f = open(radio, 'rb')
     code_list = pickle.load(f)
     for i in range(int(index), len(code_list), 20):
         params['cc'] = code_list[i:i+20]
@@ -363,13 +394,13 @@ def getData(params, index, text_message):
         try:
             res = requests.get(url=url, params=params)
             dataset = json.loads(res.text)['dataset']
-            if res.status_code == 200 and i <= 200:
+            if res.status_code == 200 and i <= int(end_index):
                 for j in dataset:
-                    desc = j['rgDesc']
                     code = j['cmdCode']
-                    data[code] = {
-                        desc: j,
-                    }
+                    desc = j['rgDesc']
+                    if data.get(code) is None:
+                        data[code] = dict()
+                    data[code][desc] = j
                     repaintText(text_message, 'Get code {} {} data.'.format(code, desc))
                 repaintText(text_message, '\n')
             else:
@@ -381,7 +412,7 @@ def getData(params, index, text_message):
     return data
 
 
-def getParams(year, index, token, reporter, partner, trade_flow):
+def getParams(year, token, reporter, partner, trade_flow):
     params = {
         'max': 500,
         'type': 'C',
@@ -422,3 +453,13 @@ def checkSelect(**kwargs):
         return (False, message)
     else:
         return (True, message)
+
+
+def checkIndex(start_index, end_index):
+    try:
+        if int(start_index) > int(end_index):
+            return (False, 'Start Index must be less then or equal to End Index.\n')
+        else:
+            return (True, '')
+    except Exception as e:
+        return (False, '')
