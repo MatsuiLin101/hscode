@@ -29,10 +29,10 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         repaintText(self.text_message, 'Start initial GUI ...')
         self.label_value_code_all.setText('')
         self.label_value_code_6.setText('')
-        self.input_period.setText('')
-        self.input_start_index.setText('0')
-        self.input_end_index.setText('0')
-        self.input_token.setText('')
+        self.tab02_input_period.setText('')
+        self.tab08_input_start_index.setText('0')
+        self.tab09_input_end_index.setText('0')
+        self.tab01_input_token.setText('')
 
         code_all, code_6, message = getUNComtradeLen()
         self.label_value_code_all.setText(str(code_all))
@@ -40,22 +40,24 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         if len(message) != 0:
             repaintText(self.text_message, message)
 
-        self.input_period.setEnabled(True)
-        self.input_start_index.setEnabled(True)
-        self.input_end_index.setEnabled(True)
-        self.input_token.setEnabled(True)
-        self.select_reporter.setEnabled(True)
-        self.select_partner.setEnabled(True)
-        self.select_trade_flow.setEnabled(True)
+        self.tab01_input_token.setEnabled(True)
+        self.tab02_input_period.setEnabled(True)
+        self.tab08_input_start_index.setEnabled(True)
+        self.tab09_input_end_index.setEnabled(True)
+        self.tab03_select_reporter.setEnabled(True)
+        self.tab04_select_partner.setEnabled(True)
+        self.tab05_select_trade_flow.setEnabled(True)
         self.btn_update_code_list.setEnabled(True)
         self.btn_get_data.setEnabled(True)
+        self.tab01_input_token.setFocus(True)
+
         repaintText(self.text_message, 'Complete initial GUI ...\n')
 
     def bindFunc(self):
         self.btn_update_code_list.clicked.connect(self.btnUpdateCodeList)
         self.btn_get_data.clicked.connect(self.btnGetData)
-        self.radio_code_all.clicked.connect(self.radioSelectAll)
-        self.radio_code_6.clicked.connect(self.radioSelect6)
+        self.tab06_radio_code_all.clicked.connect(self.radioSelectAll)
+        self.tab07_radio_code_6.clicked.connect(self.radioSelect6)
 
     def btnUpdateCodeList(self):
         repaintText(self.text_message, 'Start update HS Code, please wait a minute ...')
@@ -68,13 +70,13 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def btnGetData(self):
         radio = self.getRadio()
-        year = self.input_period.text()
-        reporter = self.select_reporter.currentText()
-        partner = self.select_partner.currentText()
-        trade_flow = self.select_trade_flow.currentText()
-        start_index = self.input_start_index.text()
-        end_index = self.input_end_index.text()
-        token = self.input_token.text()
+        year = self.tab02_input_period.text()
+        reporter = self.tab03_select_reporter.currentText()
+        partner = self.tab04_select_partner.currentText()
+        trade_flow = self.tab05_select_trade_flow.currentText()
+        start_index = self.tab08_input_start_index.text()
+        end_index = self.tab09_input_end_index.text()
+        token = self.tab01_input_token.text()
         check_input, message_input = checkInput(PeriodYear=year, StartIndex=start_index, EndIndex=end_index, Token=token)
         check_select, message_select = checkSelect(Reporter=reporter, Partner=partner, TradeFlow=trade_flow)
         check_index, message_index = checkIndex(start_index, end_index)
@@ -89,17 +91,17 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             repaintText(self.text_message, '{}{}{}'.format(message_input, message_select, message_index))
 
     def radioSelectAll(self):
-        self.radio_code_6.setChecked(False)
-        self.radio_code_all.setChecked(True)
+        self.tab07_radio_code_6.setChecked(False)
+        self.tab06_radio_code_all.setChecked(True)
 
     def radioSelect6(self):
-        self.radio_code_all.setChecked(False)
-        self.radio_code_6.setChecked(True)
+        self.tab06_radio_code_all.setChecked(False)
+        self.tab07_radio_code_6.setChecked(True)
 
     def getRadio(self):
-        if self.radio_code_all.isChecked():
+        if self.tab06_radio_code_all.isChecked():
             return 'code_all.pkl'
-        if self.radio_code_6.isChecked():
+        if self.tab07_radio_code_6.isChecked():
             return 'code_6.pkl'
         return None
 
