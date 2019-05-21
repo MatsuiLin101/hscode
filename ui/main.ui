@@ -1,0 +1,3359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_name_code_all">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>110</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>HS Code All : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_value_code_all">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>10</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_code_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>110</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>HS Code  6  : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_value_code_6">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>50</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_update_code_list">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>15</y>
+      <width>130</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Update HS Code</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_period">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Period(Year) :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_period">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>130</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_reporter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reporter        :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_partner">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Partner          :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_trade_flow">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trade Flow   :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="select_reporter">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>170</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>All</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>World</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Afghanistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Africa CAMEU region, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Albania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Algeria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>American Samoa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Andorra</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Angola</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Anguilla</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Antarctica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Antigua and Barbuda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Areas, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Argentina</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Armenia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Aruba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Australia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Austria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Azerbaijan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bahamas</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bahrain</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bangladesh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Barbados</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belarus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belgium</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belgium-Luxembourg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belize</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Benin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bermuda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bhutan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bolivia (Plurinational State of)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bonaire</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bosnia Herzegovina</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Botswana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bouvet Island</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Antarctic Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Indian Ocean Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Virgin Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Brazil</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Brunei Darussalam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bulgaria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bunkers</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Burkina Faso</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Burundi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cabo Verde</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CACM, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cambodia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cameroon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Canada</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Caribbean, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cayman Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Central African Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chad</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chile</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China, Hong Kong SAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China, Macao SAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Christmas Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cocos Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Colombia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Comoros</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Congo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cook Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Costa Rica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Côte d'Ivoire</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Croatia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cuba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Curaçao</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cyprus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Czechia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Czechoslovakia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dem. People's Rep. of Korea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dem. Rep. of the Congo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Denmark</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Djibouti</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dominica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dominican Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>East and West Pakistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Eastern Europe, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ecuador</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Egypt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>El Salvador</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Equatorial Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Eritrea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Estonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ethiopia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Europe EFTA, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Europe EU, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Faeroe Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Falkland Isds (Malvinas)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fiji</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Finland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Arab Rep. of Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Rep. of Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Rep. of Vietnam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Ethiopia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Fed. Rep. of Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Pacific Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Panama, excl.Canal Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Panama-Canal-Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Rep. of Vietnam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Rhodesia Nyas</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Tanganyika</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr USSR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Yugoslavia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Zanzibar and Pemba Isd</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fr. South Antarctic Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>France</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Free Zones</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>French Guiana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>French Polynesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FS Micronesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gabon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gambia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Georgia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ghana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gibraltar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Greece</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Greenland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Grenada</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guadeloupe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guatemala</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guinea-Bissau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guyana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Haiti</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Heard Island and McDonald Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Holy See (Vatican City State)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Honduras</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hungary</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iceland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>India</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>India, excl. Sikkim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Indonesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iran</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iraq</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ireland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Israel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Italy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jamaica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Japan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jordan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kazakhstan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kenya</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kiribati</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kuwait</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kyrgyzstan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LAIA, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lao People's Dem. Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Latvia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lebanon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lesotho</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Liberia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Libya</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lithuania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Luxembourg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Madagascar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malawi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malaysia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Maldives</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mali</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malta</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Marshall Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Martinique</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mauritania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mauritius</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mayotte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mexico</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mongolia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Montenegro</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Montserrat</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Morocco</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mozambique</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Myanmar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>N. Mariana Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Namibia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nauru</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nepal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neth. Antilles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neth. Antilles and Aruba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Netherlands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neutral Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Caledonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Zealand</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nicaragua</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Niger</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nigeria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Niue</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Norfolk Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>North America and Central America, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Northern Africa, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Norway</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Oceania, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Oman</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Africa, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Asia, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Europe, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pakistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Palau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Panama</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Papua New Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Paraguay</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Peninsula Malaysia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Peru</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Philippines</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pitcairn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Poland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Portugal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Qatar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rep. of Korea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rep. of Moldova</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rest of America, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Réunion</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Romania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Russian Federation</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rwanda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ryukyu Isd</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sabah</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Helena</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Kitts and Nevis</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Kitts, Nevis and Anguilla</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Lucia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Maarten</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Pierre and Miquelon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Vincent and the Grenadines</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Samoa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>San Marino</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sao Tome and Principe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sarawak</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saudi Arabia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Senegal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Serbia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Serbia and Montenegro</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Seychelles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sierra Leone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sikkim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Singapore</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Slovakia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Slovenia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>So. African Customs Union</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Solomon Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Somalia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Africa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Georgia and the South Sandwich Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Spain</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Special Categories</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sri Lanka</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>State of Palestine</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Suriname</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Swaziland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sweden</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Switzerland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Syria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tajikistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>TFYR of Macedonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Thailand</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Timor-Leste</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Togo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tokelau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tonga</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Trinidad and Tobago</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tunisia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turkey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turkmenistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turks and Caicos Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tuvalu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uganda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ukraine</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Arab Emirates</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Kingdom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Rep. of Tanzania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United States Minor Outlying Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uruguay</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>US Misc. Pacific Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>US Virgin Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>USA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>USA (before 1981)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uzbekistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Vanuatu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Venezuela</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Viet Nam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wallis and Futuna Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Western Asia, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Western Sahara</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Zambia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Zimbabwe</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="select_partner">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>210</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>All</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>World</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Afghanistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Africa CAMEU region, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Albania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Algeria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>American Samoa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Andorra</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Angola</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Anguilla</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Antarctica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Antigua and Barbuda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Areas, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Argentina</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Armenia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Aruba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Australia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Austria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Azerbaijan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bahamas</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bahrain</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bangladesh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Barbados</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belarus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belgium</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belgium-Luxembourg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Belize</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Benin</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bermuda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bhutan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bolivia (Plurinational State of)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bonaire</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bosnia Herzegovina</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Botswana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bouvet Island</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Antarctic Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Indian Ocean Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Br. Virgin Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Brazil</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Brunei Darussalam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bulgaria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bunkers</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Burkina Faso</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Burundi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cabo Verde</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>CACM, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cambodia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cameroon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Canada</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Caribbean, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cayman Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Central African Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chad</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chile</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China, Hong Kong SAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>China, Macao SAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Christmas Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cocos Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Colombia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Comoros</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Congo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cook Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Costa Rica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Côte d'Ivoire</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Croatia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cuba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Curaçao</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cyprus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Czechia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Czechoslovakia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dem. People's Rep. of Korea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dem. Rep. of the Congo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Denmark</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Djibouti</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dominica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dominican Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>East and West Pakistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Eastern Europe, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ecuador</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Egypt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>El Salvador</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Equatorial Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Eritrea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Estonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ethiopia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Europe EFTA, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Europe EU, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Faeroe Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Falkland Isds (Malvinas)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fiji</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Finland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Arab Rep. of Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Rep. of Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Rep. of Vietnam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Dem. Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Ethiopia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Fed. Rep. of Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Pacific Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Panama, excl.Canal Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Panama-Canal-Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Rep. of Vietnam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Rhodesia Nyas</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Tanganyika</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr USSR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Yugoslavia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fmr Zanzibar and Pemba Isd</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Fr. South Antarctic Terr.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>France</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Free Zones</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>French Guiana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>French Polynesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FS Micronesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gabon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gambia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Georgia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Germany</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ghana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gibraltar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Greece</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Greenland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Grenada</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guadeloupe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guatemala</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guinea-Bissau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guyana</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Haiti</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Heard Island and McDonald Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Holy See (Vatican City State)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Honduras</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hungary</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iceland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>India</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>India, excl. Sikkim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Indonesia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iran</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Iraq</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ireland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Israel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Italy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jamaica</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Japan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jordan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kazakhstan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kenya</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kiribati</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kuwait</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kyrgyzstan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>LAIA, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lao People's Dem. Rep.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Latvia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lebanon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lesotho</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Liberia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Libya</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lithuania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Luxembourg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Madagascar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malawi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malaysia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Maldives</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mali</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Malta</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Marshall Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Martinique</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mauritania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mauritius</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mayotte</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mexico</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mongolia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Montenegro</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Montserrat</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Morocco</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mozambique</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Myanmar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>N. Mariana Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Namibia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nauru</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nepal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neth. Antilles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neth. Antilles and Aruba</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Netherlands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neutral Zone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Caledonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>New Zealand</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nicaragua</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Niger</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nigeria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Niue</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Norfolk Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>North America and Central America, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Northern Africa, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Norway</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Oceania, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Oman</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Africa, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Asia, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other Europe, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pakistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Palau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Panama</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Papua New Guinea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Paraguay</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Peninsula Malaysia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Peru</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Philippines</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pitcairn</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Poland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Portugal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Qatar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rep. of Korea</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rep. of Moldova</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rest of America, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Réunion</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Romania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Russian Federation</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rwanda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ryukyu Isd</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sabah</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Helena</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Kitts and Nevis</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Kitts, Nevis and Anguilla</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Lucia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Maarten</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Pierre and Miquelon</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saint Vincent and the Grenadines</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Samoa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>San Marino</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sao Tome and Principe</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sarawak</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Saudi Arabia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Senegal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Serbia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Serbia and Montenegro</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Seychelles</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sierra Leone</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sikkim</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Singapore</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Slovakia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Slovenia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>So. African Customs Union</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Solomon Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Somalia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Africa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Georgia and the South Sandwich Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>South Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Spain</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Special Categories</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sri Lanka</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>State of Palestine</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sudan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Suriname</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Swaziland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sweden</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Switzerland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Syria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tajikistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>TFYR of Macedonia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Thailand</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Timor-Leste</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Togo</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tokelau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tonga</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Trinidad and Tobago</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tunisia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turkey</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turkmenistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turks and Caicos Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tuvalu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uganda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ukraine</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Arab Emirates</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Kingdom</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United Rep. of Tanzania</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>United States Minor Outlying Islands</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uruguay</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>US Misc. Pacific Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>US Virgin Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>USA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>USA (before 1981)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uzbekistan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Vanuatu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Venezuela</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Viet Nam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wallis and Futuna Isds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Western Asia, nes</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Western Sahara</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yemen</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Zambia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Zimbabwe</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="select_trade_flow">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>250</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>All</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Import</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Export</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>re-Import</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>re-Export</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_name_start_index">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>210</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start Index    :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_start_index">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>210</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_get_data">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>215</y>
+      <width>130</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Get Data</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="text_message">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>1000</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_token">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Token :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_token">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>300</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_end_index">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>250</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>End Index      :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_end_index">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>250</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
