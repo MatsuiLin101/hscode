@@ -311,10 +311,10 @@ COUNTRY = {
 }
 
 COL = [
-    'cmdCode',
-    'rgDesc',
-    'cmdDescE',
     'yr',
+    'cmdCode',
+    'cmdDescE',
+    'rgDesc',
     'rtTitle',
     'ptTitle',
     'TradeValue',
