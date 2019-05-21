@@ -340,9 +340,9 @@ def dataToExcel(data):
         filename = int(datetime.datetime.now().timestamp())
         df = pandas.DataFrame.from_dict(excel_dict, orient='index', columns=COL)
         df.to_excel('{}.xlsx'.format(filename), index=False)
-        return 'Data save as {}.xlsx .'.format(filename)
+        return 'Get {} datas.\nData save as {}.xlsx .\n'.format(len(excel_dict), filename)
 
-    return 'No data.'
+    return 'No data.\n'
 
 
 def getUNCodeList():
@@ -383,13 +383,20 @@ def getUNComtradeLen():
     return (code_all, code_6, message)
 
 
+def listToStr(cc_list):
+    string = str()
+    for i in cc_list:
+        string += '{}, '.format(i)
+    return string[:-2]
+
+
 def getData(radio, params, index, end_index, text_message):
     url = 'https://comtrade.un.org/api/get'
     data = dict()
     f = open(radio, 'rb')
     code_list = pickle.load(f)
     for i in range(int(index), len(code_list), 20):
-        params['cc'] = code_list[i:i+20]
+        params['cc'] = listToStr(code_list[i:i+20])
         repaintText(text_message, 'Request data index {}, HS codes {}'.format(i, params['cc']))
         try:
             res = requests.get(url=url, params=params)
