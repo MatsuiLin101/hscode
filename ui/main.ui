@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>110</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -35,7 +35,7 @@
    <widget class="QLabel" name="label_value_code_all">
     <property name="geometry">
      <rect>
-      <x>125</x>
+      <x>190</x>
       <y>10</y>
       <width>100</width>
       <height>30</height>
@@ -55,7 +55,7 @@
      <rect>
       <x>10</x>
       <y>50</y>
-      <width>110</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -71,7 +71,7 @@
    <widget class="QLabel" name="label_value_code_6">
     <property name="geometry">
      <rect>
-      <x>125</x>
+      <x>190</x>
       <y>50</y>
       <width>100</width>
       <height>30</height>
@@ -89,11 +89,16 @@
    <widget class="QPushButton" name="btn_update_code_list">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>290</x>
       <y>15</y>
       <width>130</width>
       <height>60</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Update HS Code</string>
@@ -104,7 +109,7 @@
      <rect>
       <x>10</x>
       <y>130</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -123,7 +128,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>190</x>
       <y>130</y>
       <width>120</width>
       <height>30</height>
@@ -138,7 +143,7 @@
      <rect>
       <x>10</x>
       <y>170</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -148,7 +153,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Reporter        :</string>
+     <string>Reporter       :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_name_partner">
@@ -156,7 +161,7 @@
      <rect>
       <x>10</x>
       <y>210</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -166,7 +171,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Partner          :</string>
+     <string>Partner         :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_name_trade_flow">
@@ -174,7 +179,7 @@
      <rect>
       <x>10</x>
       <y>250</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -193,7 +198,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>190</x>
       <y>170</y>
       <width>120</width>
       <height>30</height>
@@ -1676,7 +1681,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>190</x>
       <y>210</y>
       <width>120</width>
       <height>30</height>
@@ -3159,7 +3164,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>190</x>
       <y>250</y>
       <width>120</width>
       <height>30</height>
@@ -3199,9 +3204,9 @@
    <widget class="QLabel" name="label_name_start_index">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>330</x>
       <y>210</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -3220,7 +3225,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>510</x>
       <y>210</y>
       <width>120</width>
       <height>30</height>
@@ -3236,8 +3241,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>215</y>
+      <x>650</x>
+      <y>210</y>
       <width>130</width>
       <height>70</height>
      </rect>
@@ -3257,7 +3262,7 @@
       <x>10</x>
       <y>300</y>
       <width>1000</width>
-      <height>410</height>
+      <height>415</height>
      </rect>
     </property>
     <property name="font">
@@ -3269,8 +3274,8 @@
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PMingLiU'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.SF NS Text';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_name_token">
@@ -3278,7 +3283,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>10</x>
       <y>90</y>
-      <width>70</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -3288,7 +3293,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Token :</string>
+     <string>Token          :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="input_token">
@@ -3297,7 +3302,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>190</x>
       <y>90</y>
       <width>300</width>
       <height>30</height>
@@ -3310,9 +3315,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_name_end_index">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>330</x>
       <y>250</y>
-      <width>120</width>
+      <width>180</width>
       <height>30</height>
      </rect>
     </property>
@@ -3322,7 +3327,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>End Index      :</string>
+     <string>End Index     :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="input_end_index">
@@ -3331,7 +3336,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>510</x>
       <y>250</y>
       <width>120</width>
       <height>30</height>
@@ -3348,7 +3353,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
