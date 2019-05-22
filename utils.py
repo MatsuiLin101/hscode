@@ -329,6 +329,15 @@ def repaintText(object, message):
     QtCore.QCoreApplication.processEvents()
 
 
+def checkMonthCount(count):
+    if count > 5:
+        return (False, 'You can only select 5 month.\n')
+    elif count == 0:
+        return (False, 'Please select at least 1 month.\n')
+    else:
+        return (True, '')
+
+
 def dataToExcel(data):
     excel_dict = dict()
     index = 1
