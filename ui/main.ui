@@ -3219,8 +3219,8 @@
    <widget class="QLabel" name="label_name_start_index">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>50</y>
+      <x>700</x>
+      <y>40</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3240,8 +3240,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>50</y>
+      <x>880</x>
+      <y>40</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3260,7 +3260,7 @@
     <property name="geometry">
      <rect>
       <x>780</x>
-      <y>230</y>
+      <y>220</y>
       <width>130</width>
       <height>70</height>
      </rect>
@@ -3305,8 +3305,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_name_end_index">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>90</y>
+      <x>700</x>
+      <y>80</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3326,8 +3326,8 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>90</y>
+      <x>880</x>
+      <y>80</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3593,8 +3593,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_name_start_hs">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>150</y>
+      <x>700</x>
+      <y>140</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3605,14 +3605,14 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Start HS Code    :</string>
+     <string>Start HS Code :</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_name_end_hs">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>190</y>
+      <x>700</x>
+      <y>180</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3623,7 +3623,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>End HS Code     :</string>
+     <string>End HS Code   :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tab14_input_start_hs">
@@ -3632,8 +3632,8 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>150</y>
+      <x>880</x>
+      <y>140</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3651,8 +3651,8 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>190</y>
+      <x>880</x>
+      <y>180</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3667,8 +3667,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>-50</y>
+      <x>700</x>
+      <y>-60</y>
       <width>211</width>
       <height>281</height>
      </rect>
