@@ -3342,9 +3342,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>342</x>
       <y>80</y>
-      <width>373</width>
+      <width>361</width>
       <height>51</height>
      </rect>
     </property>
@@ -3548,7 +3548,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>351</width>
+      <width>331</width>
       <height>51</height>
      </rect>
     </property>
@@ -3623,7 +3623,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>End HS Code   :</string>
+     <string>End HS Code  :</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="tab14_input_start_hs">
@@ -3681,6 +3681,9 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>Get data by Index</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

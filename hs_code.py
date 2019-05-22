@@ -33,8 +33,6 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.tab02_input_period.setText('')
         self.tab12_input_start_index.setText('0')
         self.tab13_input_end_index.setText('0')
-        self.tab14_input_start_hs.setText('0')
-        self.tab15_input_end_hs.setText('0')
         # self.tab01_input_token.setText('')
 
         code_all, code_6, message = getUNComtradeLen()
@@ -47,8 +45,6 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.tab02_input_period.setEnabled(True)
         self.tab12_input_start_index.setEnabled(True)
         self.tab13_input_end_index.setEnabled(True)
-        self.tab14_input_start_hs.setEnabled(True)
-        self.tab15_input_end_hs.setEnabled(True)
         self.tab03_select_reporter.setEnabled(True)
         self.tab04_select_partner.setEnabled(True)
         self.tab05_select_trade_flow.setEnabled(True)
@@ -63,6 +59,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.btn_get_data.clicked.connect(self.btnGetData)
         self.tab08_radio_freq_year.clicked.connect(self.radioFreqYear)
         self.tab09_radio_freq_month.clicked.connect(self.radioFreqMonth)
+        self.tab10_radio_index.clicked.connect(self.radioIndex)
+        self.tab11_radio_hs.clicked.connect(self.radioHS)
         self.check_all.clicked.connect(self.checkAll)
 
     def btnUpdateCodeList(self):
@@ -100,6 +98,20 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             repaintText(self.text_message, message)
         else:
             repaintText(self.text_message, '{}{}{}{}'.format(message_input, message_select, message_index, message_month))
+
+    def radioIndex(self):
+        self.tab12_input_start_index.setEnabled(True)
+        self.tab13_input_end_index.setEnabled(True)
+        self.tab14_input_start_hs.setEnabled(False)
+        self.tab15_input_end_hs.setEnabled(False)
+        self.centralwidget.repaint()
+
+    def radioHS(self):
+        self.tab12_input_start_index.setEnabled(False)
+        self.tab13_input_end_index.setEnabled(False)
+        self.tab14_input_start_hs.setEnabled(True)
+        self.tab15_input_end_hs.setEnabled(True)
+        self.centralwidget.repaint()
 
     def checkEnableAll(self):
         self.check_all.setEnabled(True)
