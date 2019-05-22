@@ -3219,8 +3219,8 @@
    <widget class="QLabel" name="label_name_start_index">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>210</y>
+      <x>710</x>
+      <y>50</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3234,14 +3234,14 @@
      <string>Start Index    :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab10_input_start_index">
+   <widget class="QLineEdit" name="tab12_input_start_index">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>210</y>
+      <x>890</x>
+      <y>50</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3259,8 +3259,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>890</x>
-      <y>210</y>
+      <x>780</x>
+      <y>230</y>
       <width>130</width>
       <height>70</height>
      </rect>
@@ -3302,48 +3302,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_name_token">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>90</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Token          :</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="tab01_input_token">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>90</y>
-      <width>300</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::StrongFocus</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_name_end_index">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>250</y>
+      <x>710</x>
+      <y>90</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3357,14 +3320,14 @@ p, li { white-space: pre-wrap; }
      <string>End Index     :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab11_input_end_index">
+   <widget class="QLineEdit" name="tab13_input_end_index">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>250</y>
+      <x>890</x>
+      <y>90</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3380,14 +3343,14 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>120</y>
-      <width>351</width>
+      <y>80</y>
+      <width>373</width>
       <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QRadioButton" name="tab06_radio_freq_year">
+      <widget class="QRadioButton" name="tab08_radio_freq_year">
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
        </property>
@@ -3403,7 +3366,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="tab07_radio_freq_month">
+      <widget class="QRadioButton" name="tab09_radio_freq_month">
        <property name="tabletTracking">
         <bool>false</bool>
        </property>
@@ -3429,8 +3392,8 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>10</y>
+      <x>330</x>
+      <y>130</y>
       <width>371</width>
       <height>121</height>
      </rect>
@@ -3583,15 +3546,15 @@ p, li { white-space: pre-wrap; }
    <widget class="QWidget" name="horizontalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>120</y>
+      <x>10</x>
+      <y>80</y>
       <width>351</width>
       <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
      <item>
-      <widget class="QRadioButton" name="tab08_radio_code_all">
+      <widget class="QRadioButton" name="tab06_radio_code_all">
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
        </property>
@@ -3607,7 +3570,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="tab09_radio_code_6">
+      <widget class="QRadioButton" name="tab07_radio_code_6">
        <property name="tabletTracking">
         <bool>false</bool>
        </property>
@@ -3627,37 +3590,11 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_3">
+   <widget class="QLabel" name="label_name_start_hs">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>170</y>
-      <width>351</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="text">
-        <string>RadioButton</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="label_name_start_index_2">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>210</y>
+      <x>710</x>
+      <y>150</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3671,11 +3608,11 @@ p, li { white-space: pre-wrap; }
      <string>Start HS Code    :</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_name_end_index_2">
+   <widget class="QLabel" name="label_name_end_hs">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>250</y>
+      <x>710</x>
+      <y>190</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3689,14 +3626,14 @@ p, li { white-space: pre-wrap; }
      <string>End HS Code     :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab10_input_start_index_2">
+   <widget class="QLineEdit" name="tab14_input_start_hs">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>210</y>
+      <x>890</x>
+      <y>150</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3708,14 +3645,14 @@ p, li { white-space: pre-wrap; }
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab11_input_end_index_2">
+   <widget class="QLineEdit" name="tab15_input_end_hs">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>250</y>
+      <x>890</x>
+      <y>190</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3726,6 +3663,38 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>0</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>-50</y>
+      <width>211</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QRadioButton" name="tab10_radio_index">
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="text">
+        <string>Get data by Index</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="tab11_radio_hs">
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="text">
+        <string>Get data by HS Code</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

@@ -31,9 +31,11 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.label_value_code_all.setText('')
         self.label_value_code_6.setText('')
         self.tab02_input_period.setText('')
-        self.tab10_input_start_index.setText('0')
-        self.tab11_input_end_index.setText('0')
-        self.tab01_input_token.setText('')
+        self.tab12_input_start_index.setText('0')
+        self.tab13_input_end_index.setText('0')
+        self.tab14_input_start_hs.setText('0')
+        self.tab15_input_end_hs.setText('0')
+        # self.tab01_input_token.setText('')
 
         code_all, code_6, message = getUNComtradeLen()
         self.label_value_code_all.setText(str(code_all))
@@ -41,24 +43,26 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         if len(message) != 0:
             repaintText(self.text_message, message)
 
-        self.tab01_input_token.setEnabled(True)
+        # self.tab01_input_token.setEnabled(True)
         self.tab02_input_period.setEnabled(True)
-        self.tab10_input_start_index.setEnabled(True)
-        self.tab11_input_end_index.setEnabled(True)
+        self.tab12_input_start_index.setEnabled(True)
+        self.tab13_input_end_index.setEnabled(True)
+        self.tab14_input_start_hs.setEnabled(True)
+        self.tab15_input_end_hs.setEnabled(True)
         self.tab03_select_reporter.setEnabled(True)
         self.tab04_select_partner.setEnabled(True)
         self.tab05_select_trade_flow.setEnabled(True)
         self.btn_update_code_list.setEnabled(True)
         self.btn_get_data.setEnabled(True)
-        self.tab01_input_token.setFocus(True)
+        self.tab02_input_period.setFocus(True)
 
         repaintText(self.text_message, 'Complete initial GUI ...\n')
 
     def bindFunc(self):
         self.btn_update_code_list.clicked.connect(self.btnUpdateCodeList)
         self.btn_get_data.clicked.connect(self.btnGetData)
-        self.tab06_radio_freq_year.clicked.connect(self.radioFreqYear)
-        self.tab07_radio_freq_month.clicked.connect(self.radioFreqMonth)
+        self.tab08_radio_freq_year.clicked.connect(self.radioFreqYear)
+        self.tab09_radio_freq_month.clicked.connect(self.radioFreqMonth)
         self.check_all.clicked.connect(self.checkAll)
 
     def btnUpdateCodeList(self):
@@ -76,13 +80,13 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         reporter = self.tab03_select_reporter.currentText()
         partner = self.tab04_select_partner.currentText()
         trade_flow = self.tab05_select_trade_flow.currentText()
-        start_index = self.tab10_input_start_index.text()
-        end_index = self.tab11_input_end_index.text()
-        token = self.tab01_input_token.text()
-        check_input, message_input = checkInput(PeriodYear=year, StartIndex=start_index, EndIndex=end_index, Token=token)
+        start_index = self.tab12_input_start_index.text()
+        end_index = self.tab13_input_end_index.text()
+        # token = self.tab01_input_token.text()
+        check_input, message_input = checkInput(PeriodYear=year, StartIndex=start_index, EndIndex=end_index, Token='token')
         check_select, message_select = checkSelect(Reporter=reporter, Partner=partner, TradeFlow=trade_flow)
         check_index, message_index = checkIndex(start_index, end_index)
-        if self.tab07_radio_freq_month.isChecked() and not self.check_all.isChecked():
+        if self.tab09_radio_freq_month.isChecked() and not self.check_all.isChecked():
             check_month, message_month = self.checkMonth()
         else:
             check_month = True
@@ -90,7 +94,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
         if check_input and check_select and check_index and check_month:
             repaintText(self.text_message, 'Start get data ...')
-            params = getParams(year, token, reporter, partner, trade_flow)
+            params = getParams(year, 'token', reporter, partner, trade_flow)
             data = getData(radio, params, start_index, end_index, self.text_message)
             message = dataToExcel(data)
             repaintText(self.text_message, message)
@@ -184,9 +188,9 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         return checkMonthCount(count)
 
     def getRadio(self):
-        if self.tab08_radio_code_all.isChecked():
+        if self.tab06_radio_code_all.isChecked():
             return 'code_all.pkl'
-        if self.tab09_radio_code_6.isChecked():
+        if self.tab07_radio_code_6.isChecked():
             return 'code_6.pkl'
         return None
 
