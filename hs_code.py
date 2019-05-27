@@ -33,6 +33,10 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.tab02_input_period.setText('')
         self.tab12_input_start_index.setText('0')
         self.tab13_input_end_index.setText('0')
+        self.tab14_input_start_hs.setText('0')
+        self.tab15_input_end_hs.setText('0')
+        self.label_name_end_hs.hide()
+        self.tab15_input_end_hs.hide()
         # self.tab01_input_token.setText('')
 
         code_all, code_6, message = getUNComtradeLen()
@@ -73,15 +77,19 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         repaintText(self.text_message, '{}\n'.format(message))
 
     def btnGetData(self):
-        radio = self.getRadio()
-        year = self.tab02_input_period.text()
+        type = self.getRadioCodeType()
+        freq = self.getRadioFreqType()
+        year = self.getYearMonth()
+        index_hs = self.getIndexHS()
         reporter = self.tab03_select_reporter.currentText()
         partner = self.tab04_select_partner.currentText()
         trade_flow = self.tab05_select_trade_flow.currentText()
         start_index = self.tab12_input_start_index.text()
         end_index = self.tab13_input_end_index.text()
+        start_hs = self.tab14_input_start_hs.text()
+        end_hs = self.tab15_input_end_hs.text()
         # token = self.tab01_input_token.text()
-        check_input, message_input = checkInput(PeriodYear=year, StartIndex=start_index, EndIndex=end_index, Token='token')
+        check_input, message_input = checkInput(PeriodYear=year, StartIndex=start_index, EndIndex=end_index, StartHS=start_hs, EndHS=end_hs)
         check_select, message_select = checkSelect(Reporter=reporter, Partner=partner, TradeFlow=trade_flow)
         check_index, message_index = checkIndex(start_index, end_index)
         if self.tab09_radio_freq_month.isChecked() and not self.check_all.isChecked():
@@ -92,8 +100,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
         if check_input and check_select and check_index and check_month:
             repaintText(self.text_message, 'Start get data ...')
-            params = getParams(year, 'token', reporter, partner, trade_flow)
-            data = getData(radio, params, start_index, end_index, self.text_message)
+            params = getParams(year, freq, reporter, partner, trade_flow)
+            data = getData(type, params, start_index, end_index, start_hs, index_hs, self.text_message)
             message = dataToExcel(data)
             repaintText(self.text_message, message)
         else:
@@ -102,12 +110,16 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
     def radioIndex(self):
         self.tab12_input_start_index.setEnabled(True)
         self.tab13_input_end_index.setEnabled(True)
+        self.tab14_input_start_hs.setText('0')
         self.tab14_input_start_hs.setEnabled(False)
+        self.tab15_input_end_hs.setText('0')
         self.tab15_input_end_hs.setEnabled(False)
         self.centralwidget.repaint()
 
     def radioHS(self):
+        self.tab12_input_start_index.setText('0')
         self.tab12_input_start_index.setEnabled(False)
+        self.tab13_input_end_index.setText('0')
         self.tab13_input_end_index.setEnabled(False)
         self.tab14_input_start_hs.setEnabled(True)
         self.tab15_input_end_hs.setEnabled(True)
@@ -199,12 +211,62 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             count += 1
         return checkMonthCount(count)
 
-    def getRadio(self):
+    def getYearMonth(self):
+        year = self.tab02_input_period.text()
+        if self.tab08_radio_freq_year.isChecked():
+            return year
+        if self.tab09_radio_freq_month.isChecked():
+            if self.check_all.isChecked():
+                return year
+            else:
+                month_list = str()
+                if self.check_1.isChecked():
+                    month_list += '{}01, '.format(year)
+                if self.check_2.isChecked():
+                    month_list += '{}02, '.format(year)
+                if self.check_3.isChecked():
+                    month_list += '{}03, '.format(year)
+                if self.check_4.isChecked():
+                    month_list += '{}04, '.format(year)
+                if self.check_5.isChecked():
+                    month_list += '{}05, '.format(year)
+                if self.check_6.isChecked():
+                    month_list += '{}06, '.format(year)
+                if self.check_7.isChecked():
+                    month_list += '{}07, '.format(year)
+                if self.check_8.isChecked():
+                    month_list += '{}08, '.format(year)
+                if self.check_9.isChecked():
+                    month_list += '{}09, '.format(year)
+                if self.check_10.isChecked():
+                    month_list += '{}10, '.format(year)
+                if self.check_11.isChecked():
+                    month_list += '{}11, '.format(year)
+                if self.check_12.isChecked():
+                    month_list += '{}12, '.format(year)
+                if len(month_list) > 0:
+                    return month_list[:-2]
+        return year
+
+    def getIndexHS(self):
+        if self.tab10_radio_index.isChecked():
+            return 'index'
+        else:
+            return 'hs'
+
+    def getRadioFreqType(self):
+        if self.tab08_radio_freq_year.isChecked():
+            return 'A'
+        if self.tab09_radio_freq_month.isChecked():
+            return 'M'
+        return 'A'
+
+    def getRadioCodeType(self):
         if self.tab06_radio_code_all.isChecked():
             return 'code_all.pkl'
         if self.tab07_radio_code_6.isChecked():
             return 'code_6.pkl'
-        return None
+        return 'code_6.pkl'
 
 
 class InitialMainWindow:

@@ -311,7 +311,7 @@ COUNTRY = {
 }
 
 COL = [
-    'yr',
+    'period',
     'cmdCode',
     'cmdDescE',
     'rgDesc',
@@ -399,25 +399,27 @@ def listToStr(cc_list):
     return string[:-2]
 
 
-def getData(radio, params, index, end_index, text_message):
+def getData(type, params, index, end_index, hs_code, index_hs, text_message):
     url = 'https://comtrade.un.org/api/get'
     data = dict()
-    f = open(radio, 'rb')
+    f = open(type, 'rb')
     code_list = pickle.load(f)
-    for i in range(int(index), len(code_list), 20):
-        params['cc'] = listToStr(code_list[i:i+20])
-        repaintText(text_message, 'Request data index {}, HS codes {}'.format(i, params['cc']))
+    if index_hs == 'hs':
+        print('hs')
+        params['cc'] = hs_code
+        repaintText(text_message, 'Request HS codes {}'.format(params['cc']))
         try:
             res = requests.get(url=url, params=params)
             dataset = json.loads(res.text)['dataset']
-            if res.status_code == 200 and i <= int(end_index):
+            if res.status_code == 200:
                 for j in dataset:
+                    period = j['period']
                     code = j['cmdCode']
                     desc = j['rgDesc']
                     if data.get(code) is None:
                         data[code] = dict()
-                    data[code][desc] = j
-                    repaintText(text_message, 'Get code {} {} data.'.format(code, desc))
+                    data[code]['{}{}'.format(period, desc)] = j
+                    repaintText(text_message, 'Get code {} {} {} data.'.format(period, code, desc))
                 repaintText(text_message, '\n')
             else:
                 repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
@@ -425,20 +427,43 @@ def getData(radio, params, index, end_index, text_message):
         except Exception as e:
             repaintText(text_message, 'Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
             return data
+    else:
+        print('index')
+        for i in range(int(index), len(code_list), 20):
+            params['cc'] = listToStr(code_list[i:i+20])
+            repaintText(text_message, 'Request data index {}, HS codes {}'.format(i, params['cc']))
+            try:
+                res = requests.get(url=url, params=params)
+                dataset = json.loads(res.text)['dataset']
+                if res.status_code == 200 and i <= int(end_index):
+                    for j in dataset:
+                        period = j['period']
+                        code = j['cmdCode']
+                        desc = j['rgDesc']
+                        if data.get(code) is None:
+                            data[code] = dict()
+                        data[code]['{}{}'.format(period, desc)] = j
+                        repaintText(text_message, 'Get code {} {} {} data.'.format(period, code, desc))
+                    repaintText(text_message, '\n')
+                else:
+                    repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                    return data
+            except Exception as e:
+                repaintText(text_message, 'Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                return data
     return data
 
 
-def getParams(year, token, reporter, partner, trade_flow):
+def getParams(year, freq, reporter, partner, trade_flow):
     params = {
         'max': 500,
         'type': 'C',
-        'freq': 'A',
+        'freq': freq,
         'px': 'HS',
         'ps': year,
         'r': COUNTRY.get(reporter),
         'p': COUNTRY.get(partner),
         'rg': TRADEFLOW.get(trade_flow),
-        'uitoken': token,
     }
     return params
 
@@ -449,9 +474,15 @@ def checkInput(**kwargs):
         if len(value) == 0:
             message += 'Please input {}.\n'.format(key)
         else:
-            if key != 'Token':
+            if key != 'PeriodYear':
                 try:
                     int(value)
+                except Exception as e:
+                    message += 'Please input {} as number.\n'.format(key)
+            else:
+                try:
+                    month_list = value.replace(', ', '')
+                    int(month_list)
                 except Exception as e:
                     message += 'Please input {} as number.\n'.format(key)
     if len(message) > 0:
