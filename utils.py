@@ -329,6 +329,14 @@ def repaintText(object, message):
     QtCore.QCoreApplication.processEvents()
 
 
+def saveLog(message):
+    filename = int(datetime.datetime.now().timestamp())
+    f = open('log_{}.txt'.format(filename), 'w')
+    f.writelines(message)
+    f.close
+    return filename
+
+
 def checkMonthCount(count):
     if count > 5:
         return (False, 'You can only select 5 month.\n')
@@ -422,10 +430,12 @@ def getData(type, params, index, end_index, hs_code, index_hs, text_message):
                     repaintText(text_message, 'Get code {} {} {} data.'.format(period, code, desc))
                 repaintText(text_message, '\n')
             else:
-                repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                log_name = saveLog('Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content save as log file log_{}.txt\n'.format(i, res.status_code, log_name))
                 return data
         except Exception as e:
-            repaintText(text_message, 'Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+            log_name = saveLog('Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+            repaintText(text_message, 'Except, index is {}, status is {}, content save as log file log_{}.txt\n'.format(i, res.status_code, log_name))
             return data
     else:
         print('index')
@@ -446,10 +456,12 @@ def getData(type, params, index, end_index, hs_code, index_hs, text_message):
                         repaintText(text_message, 'Get code {} {} {} data.'.format(period, code, desc))
                     repaintText(text_message, '\n')
                 else:
-                    repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                    log_name = saveLog('Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                    repaintText(text_message, 'Error, else condition.\nindex is {}, status is {}, content save as log file log_{}.txt\n'.format(i, res.status_code, log_name))
                     return data
             except Exception as e:
-                repaintText(text_message, 'Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                log_name = saveLog('Except, index is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                repaintText(text_message, 'Except, index is {}, status is {}, content save as log file log_{}.txt\n'.format(i, res.status_code, log_name))
                 return data
     return data
 
