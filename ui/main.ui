@@ -14,104 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_name_code_all">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>HS Code All : </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_value_code_all">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>10</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_name_code_6">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>HS Code  6  : </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_value_code_6">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>50</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_update_code_list">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>15</y>
-      <width>130</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::ClickFocus</enum>
-    </property>
-    <property name="text">
-     <string>Update HS Code</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_name_period">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>130</y>
+      <y>10</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -125,14 +32,14 @@
      <string>Period(Year) :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab02_input_period">
+   <widget class="QLineEdit" name="tab01_input_period">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>130</y>
+      <y>10</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -148,7 +55,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>170</y>
+      <y>50</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -166,7 +73,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
+      <y>90</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -184,7 +91,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>250</y>
+      <y>130</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -198,14 +105,14 @@
      <string>Trade Flow   :</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="tab03_select_reporter">
+   <widget class="QComboBox" name="tab02_select_reporter">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>170</y>
+      <y>50</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -1684,14 +1591,14 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="tab04_select_partner">
+   <widget class="QComboBox" name="tab03_select_partner">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>210</y>
+      <y>90</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3170,14 +3077,14 @@
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="tab05_select_trade_flow">
+   <widget class="QComboBox" name="tab04_select_trade_flow">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>250</y>
+      <y>130</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3219,8 +3126,8 @@
    <widget class="QLabel" name="label_name_start_index">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>40</y>
+      <x>10</x>
+      <y>210</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3234,14 +3141,14 @@
      <string>Start Index    :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab12_input_start_index">
+   <widget class="QLineEdit" name="tab09_input_start_index">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>40</y>
+      <x>190</x>
+      <y>210</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3259,8 +3166,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>220</y>
+      <x>700</x>
+      <y>210</y>
       <width>130</width>
       <height>70</height>
      </rect>
@@ -3305,8 +3212,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_name_end_index">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>80</y>
+      <x>10</x>
+      <y>250</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3320,14 +3227,14 @@ p, li { white-space: pre-wrap; }
      <string>End Index     :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab13_input_end_index">
+   <widget class="QLineEdit" name="tab10_input_end_index">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>80</y>
+      <x>190</x>
+      <y>250</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3343,14 +3250,14 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>342</x>
-      <y>80</y>
+      <y>0</y>
       <width>361</width>
       <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QRadioButton" name="tab08_radio_freq_year">
+      <widget class="QRadioButton" name="tab05_radio_freq_year">
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
        </property>
@@ -3366,7 +3273,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="tab09_radio_freq_month">
+      <widget class="QRadioButton" name="tab06_radio_freq_month">
        <property name="tabletTracking">
         <bool>false</bool>
        </property>
@@ -3393,7 +3300,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>130</y>
+      <y>50</y>
       <width>371</width>
       <height>121</height>
      </rect>
@@ -3543,58 +3450,11 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>331</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QRadioButton" name="tab06_radio_code_all">
-       <property name="focusPolicy">
-        <enum>Qt::StrongFocus</enum>
-       </property>
-       <property name="text">
-        <string>Code All</string>
-       </property>
-       <property name="checked">
-        <bool>false</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="tab07_radio_code_6">
-       <property name="tabletTracking">
-        <bool>false</bool>
-       </property>
-       <property name="focusPolicy">
-        <enum>Qt::StrongFocus</enum>
-       </property>
-       <property name="text">
-        <string>Code 6</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="label_name_start_hs">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>140</y>
+      <x>350</x>
+      <y>210</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3611,8 +3471,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_name_end_hs">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>180</y>
+      <x>350</x>
+      <y>250</y>
       <width>180</width>
       <height>30</height>
      </rect>
@@ -3626,14 +3486,14 @@ p, li { white-space: pre-wrap; }
      <string>End HS Code  :</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab14_input_start_hs">
+   <widget class="QLineEdit" name="tab11_input_start_hs">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>140</y>
+      <x>530</x>
+      <y>210</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3645,14 +3505,14 @@ p, li { white-space: pre-wrap; }
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tab15_input_end_hs">
+   <widget class="QLineEdit" name="tab12_input_end_hs">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>180</y>
+      <x>530</x>
+      <y>250</y>
       <width>120</width>
       <height>30</height>
      </rect>
@@ -3664,18 +3524,18 @@ p, li { white-space: pre-wrap; }
      <string>0</string>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>-60</y>
-      <width>211</width>
-      <height>281</height>
+      <x>10</x>
+      <y>150</y>
+      <width>661</width>
+      <height>80</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QRadioButton" name="tab10_radio_index">
+      <widget class="QRadioButton" name="tab07_radio_index">
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
        </property>
@@ -3688,7 +3548,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="tab11_radio_hs">
+      <widget class="QRadioButton" name="tab08_radio_hs">
        <property name="focusPolicy">
         <enum>Qt::StrongFocus</enum>
        </property>

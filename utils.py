@@ -388,16 +388,16 @@ def getUNCodeList():
     return message
 
 
-def getUNComtradeLen():
-    f = open('code_all.pkl', 'rb')
-    code_all = len(pickle.load(f))
-    f = open('code_6.pkl', 'rb')
-    code_6 = len(pickle.load(f))
-    if code_all == 0 or code_6 == 0:
-        message = 'HS Code list is none, please update HS Code.'
-    else:
-        message = 'HS Code All is {}.\nHS Code 6 is {}.'.format(code_all, code_6)
-    return (code_all, code_6, message)
+# def getUNComtradeLen():
+#     f = open('code_all.pkl', 'rb')
+#     code_all = len(pickle.load(f))
+#     f = open('code_6.pkl', 'rb')
+#     code_6 = len(pickle.load(f))
+#     if code_all == 0 or code_6 == 0:
+#         message = 'HS Code list is none, please update HS Code.'
+#     else:
+#         message = 'HS Code All is {}.\nHS Code 6 is {}.'.format(code_all, code_6)
+#     return (code_all, code_6, message)
 
 
 def listToStr(cc_list):
@@ -407,10 +407,10 @@ def listToStr(cc_list):
     return string[:-2]
 
 
-def getData(type, params, index, end_index, hs_code, index_hs, text_message):
+def getData(params, index, end_index, hs_code, index_hs, text_message):
     url = 'https://comtrade.un.org/api/get'
     data = dict()
-    f = open(type, 'rb')
+    f = open('code_ccc.pkl', 'rb')
     code_list = pickle.load(f)
     if index_hs == 'hs':
         print('hs')
@@ -440,12 +440,23 @@ def getData(type, params, index, end_index, hs_code, index_hs, text_message):
     else:
         print('index')
         for i in range(int(index), len(code_list), 20):
-            params['cc'] = listToStr(code_list[i:i+20])
+            if i > int(end_index):
+                # log_name = saveLog('Error, else condition.\nindex is {}, status is {}, content is {}\n'.format(i, res.status_code, res.text))
+                repaintText(text_message, 'End index.\n')
+                return data
+            elif i + 20 > int(end_index) and i < int(end_index):
+                print('elif')
+                params['cc'] = listToStr(code_list[i:int(end_index)])
+                print(params['cc'])
+            else:
+                print('else')
+                params['cc'] = listToStr(code_list[i:i+20])
+                print(params['cc'])
             repaintText(text_message, 'Request data index {}, HS codes {}'.format(i, params['cc']))
             try:
                 res = requests.get(url=url, params=params)
                 dataset = json.loads(res.text)['dataset']
-                if res.status_code == 200 and i <= int(end_index):
+                if res.status_code == 200:
                     for j in dataset:
                         period = j['period']
                         code = j['cmdCode']
