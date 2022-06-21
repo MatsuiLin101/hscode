@@ -8,7 +8,7 @@ urllib3==1.25.2
 et-xmlfile==1.0.1
 jdcal==1.4.1
 openpyxl==2.6.2
-numpy==1.16.3
+numpy==1.22.0
 pandas==0.24.2
 python-dateutil==2.8.0
 pytz==2019.1
